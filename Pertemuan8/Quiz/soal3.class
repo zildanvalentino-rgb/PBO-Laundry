@@ -1,0 +1,27 @@
+package Pertemuan8.Quiz;
+
+public class soal2 {
+	public static void main(String[] args) {
+		GreenApple apel = new GreenApple();
+		apel.tampilkanJenis();
+	}
+}
+
+class Fruits {
+	protected String nama = "Buah";
+
+	public void tampilkanJenis() {
+		System.out.println("Ini adalah " + nama);
+	}
+}
+
+// Ini inheritance multilevel: Fruits -> Apple -> GreenApple.
+class Apple extends Fruits {
+	protected String nama = "Apel";
+}
+
+class GreenApple extends Apple {
+	public GreenApple() {
+		nama = "Apel Hijau";
+	}
+}

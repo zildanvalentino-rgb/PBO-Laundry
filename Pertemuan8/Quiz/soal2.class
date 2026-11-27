@@ -1,0 +1,32 @@
+package Pertemuan8.Quiz;
+
+public class soal1 {
+	public static void main(String[] args) {
+		Manager manager = new Manager();
+		Developer developer = new Developer(); 
+
+		manager.bekerja();
+		developer.bekerja();
+	}
+}
+
+class Employee { 
+	void bekerja() {
+		System.out.println("Employee sedang bekerja");
+	}
+}
+
+// Ini hierarchical inheritance: satu superclass diwarisi oleh beberapa subclass.
+class Manager extends Employee {
+	@Override
+	void bekerja() {
+		System.out.println("Manager mengatur tim");
+	}
+}
+
+class Developer extends Employee {
+	@Override
+	void bekerja() {
+		System.out.println("Developer menulis kode");
+	}
+}
